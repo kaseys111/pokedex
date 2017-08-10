@@ -1,0 +1,100 @@
+<!-- Validation failure messages -->
+<% if @pokemon.errors.any? %>
+  <% @pokemon.errors.full_messages.each do |message| %>
+    <div class="alert alert-dismissable alert-danger">
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+      <%= message %>
+    </div>
+  <% end %>
+<% end %>
+
+<div class="page-header">
+  <h3>Edit Pokemon #<%= @pokemon.id %></h3>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <form action="/update_pokemon/<%= @pokemon.id %>" method="post">
+      <!-- Hidden input for authenticity token to protect from forgery -->
+      <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
+
+      <!-- Label and input for index -->
+      <div class="form-group">
+        <label for="index" class="control-label">
+          Index
+        </label>
+
+        <input type="text" id="index" name="index" placeholder="Index" class="form-control" value="<%= @pokemon.index %>">
+      </div>
+
+      <!-- Label and input for creature -->
+      <div class="form-group">
+        <label for="creature" class="control-label">
+          Creature
+        </label>
+
+        <input type="text" id="creature" name="creature" placeholder="Creature" class="form-control" value="<%= @pokemon.creature %>">
+      </div>
+
+      <!-- Label and input for level -->
+      <div class="form-group">
+        <label for="level" class="control-label">
+          Level
+        </label>
+
+        <input type="text" id="level" name="level" placeholder="Level" class="form-control" value="<%= @pokemon.level %>">
+      </div>
+
+      <!-- Label and input for new_move_level -->
+      <div class="form-group">
+        <label for="new_move_level" class="control-label">
+          New move level
+        </label>
+
+        <input type="text" id="new_move_level" name="new_move_level" placeholder="New move level" class="form-control" value="<%= @pokemon.new_move_level %>">
+      </div>
+
+      <!-- Label and input for new_move -->
+      <div class="form-group">
+        <label for="new_move" class="control-label">
+          New move
+        </label>
+
+        <input type="text" id="new_move" name="new_move" placeholder="New move" class="form-control" value="<%= @pokemon.new_move %>">
+      </div>
+
+      <!-- Label and input for move_effect -->
+      <div class="form-group">
+        <label for="move_effect" class="control-label">
+          Move effect
+        </label>
+
+        <input type="text" id="move_effect" name="move_effect" placeholder="Move effect" class="form-control" value="<%= @pokemon.move_effect %>">
+      </div>
+
+      <!-- Label and input for evolve_level -->
+      <div class="form-group">
+        <label for="evolve_level" class="control-label">
+          Evolve level
+        </label>
+
+        <input type="text" id="evolve_level" name="evolve_level" placeholder="Evolve level" class="form-control" value="<%= @pokemon.evolve_level %>">
+      </div>
+
+      <!-- Label and input for other -->
+      <div class="form-group">
+        <label for="other" class="control-label">
+          Other
+        </label>
+
+        <input type="text" id="other" name="other" placeholder="Other" class="form-control" value="<%= @pokemon.other %>">
+      </div>
+
+      <button class="btn btn-warning">
+        Update Pokemon
+      </button>
+      or
+      <a href="/pokemons/<%= @pokemon.id %>">Cancel</a>
+    </form>
+  </div>
+</div>

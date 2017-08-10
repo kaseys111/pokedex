@@ -1,0 +1,33 @@
+<div class="page-header">
+  <h1>
+    TMs
+    <a href="/tms/new" class="btn btn-lg btn-success">New TM</a>
+  </h1>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <table class="table table-striped table-hover">
+      <tr>
+        <th>TM</th>
+        <th>Move</th>
+        <th>Type</th>
+        <th>Effect</th>
+        <th>Actions</th>
+      </tr>
+
+      <% @tms.each do |tm| %>
+      <tr>
+        <td><a href="/tms/<%= tm.id %>"><%= tm.tm_no %></a></td>
+        <td><%= tm.move %></td>
+        <td><%= tm.type.title %></td>
+        <td><%= tm.effect %></td>
+        <td>
+          <a href="/tms/<%= tm.id %>/edit" class="btn btn-warning">Edit</a>
+          <a href="/delete_tm/<%= tm.id %>" class="btn btn-danger" rel="nofollow">Delete</a>
+        </td>
+      </tr>
+      <% end %>
+    </table>
+  </div>
+</div>

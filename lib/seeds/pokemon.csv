@@ -1,0 +1,38 @@
+pokedex_id,pokemon,level,new_move_level,new_move,move_effect,evolve_level,other
+2,ivysaur,24,30,razor leaf,attack,32,
+5,charmeleon,25,33,slash,attack,36,
+8,wartortle,25,31,withdraw,raises Defense,36,
+12,butterfree,26,28,gust,attack,,final form
+17,pidgeotto,26,31,wing attack,attack,36,
+20,raticate,25,27,focus energy,increases critical hit ratio,,final form
+22,fearow,27,34,drill peck,attack,,final form
+25,pikachu,37,41,thunder,attack,,final form
+28,sandslash,25,27,poison sting,attack,,final form
+30,nidorina,23,27,tail whip,lowers Defense,,moon stone
+32,nidoran_m,36,38,horn drill,knock out,37,
+35,clefairy,21,24,minimize,raises Evasion,,moon stone
+39,jigglypuff,24,29,rest,"sleep 2 turns, fully healed",,moon stone
+42,golbat,27,32,wing attack,attack,,final form
+44,gloom,25,28,acid,attack,,leaf stone
+48,venonat,22,27,leech life,attack and recover health,31,
+50,diglett,25,35,slash,attack,26,
+56,mankey,25,27,focus energy,increases critical hit ratio,28,
+64,kadabra,24,27,psybeam,attack,,final form
+66,machop,24,25,leer,lowers Defense,28,
+70,weepinbell,24,29,acid,attack,,leaf stone
+73,tentacruel,30,35,barrier,raises Defense,,final form
+74,geodude,23,29,harden,raises Defense,25,
+84,doduo,24,30,drill peck,attack,31,
+93,haunter,27,29,hypnosis,puts opponent to sleep,,final form
+97,hypno,30,33,poison gas,poisons opponent,,final form
+102,exeggcute,22,25,reflect,reduces damage for 5 turns,,leaf stone
+104,cubone,26,33,focus energy,increases critical hit ratio,28,
+107,hitmonchan,33,38,ice punch,attack,,final form
+111,ryhorn,23,30,stomp,attack,42,
+113,chansey,21,24,sing,puts opponent to sleep,,final form
+117,seadra,26,30,water gun,attack,,final form
+120,staryu,20,22,harden,raises Defense,,water stone
+123,scyther,26,29,slash,attack,,final form
+130,gyrados,26,32,leer,lowers Defense,,final form
+131,lapras,15,16,sing,puts opponent to sleep,,final form
+133,eevee,25,30,bite,attack,,water stone / fire stone / thunderstone

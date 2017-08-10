@@ -1,0 +1,48 @@
+<div class="page-header">
+  <h3><%= @pokemon.creature.capitalize %></h3>
+</div>
+
+<div class="row">
+  <div class="col-md-12 mb-2">
+    <dl class="dl-horizontal">
+      <dt>Index</dt>
+      <dd><%= @pokemon.index %></dd>
+
+      <dt>Current Level</dt>
+      <dd><%= @pokemon.level %></dd>
+
+      <dt>New Move Level</dt>
+      <dd><%= @pokemon.new_move_level %></dd>
+
+      <dt>New Move</dt>
+      <dd><%= @pokemon.new_move.titleize %></dd>
+
+      <dt>Move Effect</dt>
+      <dd><%= @pokemon.move_effect.capitalize %></dd>
+
+      <dt>Evolve Level</dt>
+      <dd><%= @pokemon.evolve_level %></dd>
+
+      <dt>Evolution Path</dt>
+      <dd><%= @pokemon.other.titleize %></dd>
+
+      <dt>Types</dt>
+      <% @pokemon.types.each do |t| %>
+      <dd><%= t.title.capitalize %></dd>
+      <% end %>
+
+    </dl>
+
+    <div class="btn-group btn-group-justified">
+      <a href="/pokemons" class="btn btn-primary">
+        Back
+      </a>
+      <a href="/pokemons/<%= @pokemon.id %>/edit" class="btn btn-warning">
+        Edit
+      </a>
+      <a href="/delete_pokemon/<%= @pokemon.id %>" class="btn btn-danger" rel="nofollow">
+        Delete
+      </a>
+    </div>
+  </div>
+</div>

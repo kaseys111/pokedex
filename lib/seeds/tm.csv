@@ -1,0 +1,18 @@
+id,move,type,effect
+2,razor wind,1,"prepares on turn one, attacks on turn two"
+3,swords dance,1,raises attack
+7,horn drill,1,knock out
+9,take down,1,"attack, but receive recoil"
+10,double-edge,1,"attack, but receive recoil"
+18,counter,7,attack with 2x power of attacking move
+20,rage,1,attack and raises attack
+21,mega drain,5,attack and recover HP
+26,earthquake,9,attack
+29,teleport,11,flee
+30,mimic,1,copies attacking move
+32,double team,1,raises evasiveness
+36,self-destruct,1,"high damage, but user faints"
+37,egg bomb,1,attack
+40,skull bash,1,"raise defense on turn one, attacks on turn two"
+45,thunder wave,4,paralyzes opponent
+46,psywave,11,attack

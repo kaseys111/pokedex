@@ -1,0 +1,37 @@
+<div class="page-header">
+  <h3>Tm #<%= @tm.tm_no %></h3>
+</div>
+
+<div class="row">
+  <div class="col-md-12 mb-2">
+    <dl class="dl-horizontal">
+
+      <dt>Move</dt>
+      <dd><%= @tm.move %></dd>
+
+      <dt>Type</dt>
+      <dd><%= @tm.type.title %></dd>
+
+      <dt>Effect</dt>
+      <dd><%= @tm.effect %></dd>
+
+      <dt>Pokemon Who Can Learn <%= @tm.move %></dt>
+      <% @tm.type.pokemon.each do |p| %>
+        <dd><%= p.creature.capitalize %></dd>
+      <% end %>
+
+    </dl>
+
+    <div class="btn-group btn-group-justified">
+      <a href="/tms" class="btn btn-primary">
+        Back
+      </a>
+      <a href="/tms/<%= @tm.id %>/edit" class="btn btn-warning">
+        Edit
+      </a>
+      <a href="/delete_tm/<%= @tm.id %>" class="btn btn-danger" rel="nofollow">
+        Delete
+      </a>
+    </div>
+  </div>
+</div>

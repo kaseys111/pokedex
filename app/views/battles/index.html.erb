@@ -1,0 +1,32 @@
+<div class="page-header">
+  <h1>
+    Battles
+    <a href="/battles/new" class="btn btn-lg btn-success">New Battle</a>
+  </h1>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <table class="table table-striped table-hover">
+      <tr>
+        <th>Offense</th>
+        <th>Defense</th>
+        <th>Effectiveness</th>
+        <th>Actions</th>
+      </tr>
+
+      <% @battles.each do |battle| %>
+      <tr>
+        <td><%= battle.offense.title %></td>
+        <td><%= battle.defense.title %></td>
+        <td><%= battle.effectiveness %></td>
+        <td>
+          <a href="/battles/<%= battle.id %>" class="btn btn-primary">Show</a>
+          <a href="/battles/<%= battle.id %>/edit" class="btn btn-warning">Edit</a>
+          <a href="/delete_battle/<%= battle.id %>" class="btn btn-danger" rel="nofollow">Delete</a>
+        </td>
+      </tr>
+      <% end %>
+    </table>
+  </div>
+</div>

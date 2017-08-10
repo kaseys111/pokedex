@@ -1,0 +1,64 @@
+<!-- Validation failure messages -->
+<% if @tm.errors.any? %>
+  <% @tm.errors.full_messages.each do |message| %>
+    <div class="alert alert-dismissable alert-danger">
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+      <%= message %>
+    </div>
+  <% end %>
+<% end %>
+
+<div class="page-header">
+  <h3>Add Tm</h3>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <form action="/create_tm" method="post">
+      <!-- Hidden input for authenticity token to protect from forgery -->
+      <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
+
+      <!-- Label and input for tm_no -->
+      <div class="form-group">
+        <label for="tm_no" class="control-label">
+          Tm no
+        </label>
+
+        <input type="text" id="tm_no" name="tm_no" placeholder="Tm no" class="form-control" value="<%= @tm.tm_no %>">
+      </div>
+
+      <!-- Label and input for move -->
+      <div class="form-group">
+        <label for="move" class="control-label">
+          Move
+        </label>
+
+        <input type="text" id="move" name="move" placeholder="Move" class="form-control" value="<%= @tm.move %>">
+      </div>
+
+      <!-- Label and input for type_id -->
+      <div class="form-group">
+        <label for="type_id" class="control-label">
+          Type
+        </label>
+
+        <input type="text" id="type_id" name="type_id" placeholder="Type" class="form-control" value="<%= @tm.type_id %>">
+      </div>
+
+      <!-- Label and input for effect -->
+      <div class="form-group">
+        <label for="effect" class="control-label">
+          Effect
+        </label>
+
+        <input type="text" id="effect" name="effect" placeholder="Effect" class="form-control" value="<%= @tm.effect %>">
+      </div>
+
+      <button class="btn btn-success">
+        Create Tm
+      </button>
+      or
+      <a href="/tms">Cancel</a>
+    </form>
+  </div>
+</div>
